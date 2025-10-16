@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SuperFocusFlow Support - Get help with your productivity companion app">
+    <title>SuperFocusFlow - Support & Help Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .header .tagline {
+            font-size: 1.1em;
+            opacity: 0.85;
+        }
+
+        /* Main Content */
+        .content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .contact-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-box .email {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 35px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .contact-box .email:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .response-time {
+            margin-top: 20px;
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 40px;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .feature-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-item:hover {
+            background: #fff;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+            transform: translateX(5px);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.25em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.4;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 15px;
+            font-size: 1em;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #555;
+            padding-left: 55px;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .footer .app-badge {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .footer .tagline {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .footer .copyright {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+
+            .contact-section h2,
+            .features h2,
+            .faq-section h2 {
+                font-size: 1.9em;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section,
+            .features,
+            .faq-section {
+                padding: 40px 25px;
+            }
+
+            .faq-question {
+                font-size: 1.1em;
+            }
+
+            .faq-answer {
+                padding-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 SuperFocusFlow</h1>
+            <p class="subtitle">Your Productivity Companion</p>
+            <p class="tagline">Support & Help Center</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2>📧 Get in Touch</h2>
+                <p>Have questions? Need help? We're here for you!</p>
+                <div class="contact-box">
+                    <p style="margin-bottom: 15px; font-size: 1.1em;">Contact us for support, feedback, or inquiries:</p>
+                    <a href="mailto:houping.zhu@bostonidentity.com" class="email">
+                        houping.zhu@bostonidentity.com
+                    </a>
+                    <p class="response-time">⏱️ We typically respond within 24-48 hours</p>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <h2>✨ What Makes SuperFocusFlow Special</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">⏰</span>
+                        <h3>7 Beautiful Timer Styles</h3>
+                        <p>Choose from stunning visualizations: Circular, Liquid Fill, Digital Flip, Minimal, Animated, Particle, and Neon. Find the perfect style for your mood.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">✅</span>
+                        <h3>Smart Task Management</h3>
+                        <p>Organize your work with priorities, estimated pomodoros, and a smart "Today" view. Stay focused on what matters most.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">📊</span>
+                        <h3>Detailed Analytics</h3>
+                        <p>Track your productivity journey with comprehensive statistics, beautiful heat maps, and motivating streak tracking.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">🎵</span>
+                        <h3>Ambient Sounds</h3>
+                        <p>Enhance focus with 10+ curated white noise options: Rain, Ocean, Forest, Coffee Shop, and more.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">📱</span>
+                        <h3>Home Screen Widgets</h3>
+                        <p>Quick access to your productivity at a glance. Beautiful widgets in Small and Medium sizes with live timer updates.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <span class="feature-icon">🎁</span>
+                        <h3>100% FREE Forever</h3>
+                        <p>All features unlocked. No ads, no subscriptions, no hidden costs. Built for productivity, not profit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>❓ Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I customize my timer durations?</div>
+                    <div class="faq-answer">Navigate to Settings and adjust your preferences. Set focus sessions from 5-60 minutes, short breaks from 1-15 minutes, and long breaks from 5-30 minutes. Your settings are saved automatically.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I add widgets to my home screen?</div>
+                    <div class="faq-answer">Long press on your home screen, tap the "+" icon in the top corner, search for "SuperFocusFlow", select your preferred widget size (Small for progress circle, Medium for task + timer), and tap "Add Widget". The widget updates in real-time!</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is my data synced to the cloud?</div>
+                    <div class="faq-answer">Currently, all your data (tasks, statistics, settings) is stored locally on your device for maximum privacy and security. Your information never leaves your device. Cloud sync may be added in future updates based on user feedback.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is SuperFocusFlow really 100% free?</div>
+                    <div class="faq-answer">Absolutely! Every single feature is completely free with zero ads, no subscriptions, and no in-app purchases. We built SuperFocusFlow to help people achieve their goals, not to monetize features. It will stay free forever.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I change the timer visualization?</div>
+                    <div class="faq-answer">Tap on the timer display on the main screen to cycle through all 7 beautiful visualization styles: Circular, Liquid Fill, Digital Flip, Minimal, Animated, Particle, and Neon. Your preference is saved automatically.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I play ambient sounds during my focus sessions?</div>
+                    <div class="faq-answer">Tap the sound icon on the main screen to access our curated ambient sounds library. Choose from 10+ options including Rain, Ocean, Forest, Coffee Shop, and more. Adjust the volume or mute as needed. Sounds continue playing in the background during sessions.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I reset my statistics and start fresh?</div>
+                    <div class="faq-answer">Yes! Go to Settings and scroll down to find "Reset Statistics". This will clear all your productivity data, streak counts, and history. Please note: This action cannot be undone, so make sure you're ready for a fresh start.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is the Pomodoro Technique?</div>
+                    <div class="faq-answer">The Pomodoro Technique is a time management method developed by Francesco Cirillo. Work in 25-minute focused sessions (pomodoros), take a 5-minute break, and after 4 pomodoros, take a longer 15-30 minute break. This helps maintain focus and prevent burnout.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Will there be more features in future updates?</div>
+                    <div class="faq-answer">Yes! We're actively developing new features based on user feedback. Potential additions include cloud sync across devices, additional language support, more timer visualizations, enhanced analytics, and deeper customization options. Send us your feature requests!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="app-badge">🚀 SuperFocusFlow</p>
+            <p class="tagline">Start your productivity journey today</p>
+            <p style="font-size: 1.1em; margin-top: 10px;">Available on the App Store</p>
+            <p class="copyright">© 2025 Boston Identity LLC. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
